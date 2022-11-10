@@ -1,0 +1,5 @@
+[elk]
+name=elk repo
+baseurl=http://11.11.106.201:800/elk-repo
+enabled=1
+gpgcheck=0

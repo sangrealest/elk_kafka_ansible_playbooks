@@ -1,0 +1,33 @@
+[elk_elasticsearch_logstash]
+# master input master server at the first line
+11.11.106.177 es_master_node=true
+11.11.106.178
+11.11.106.179
+
+
+[elk_kafka]
+11.11.106.180
+11.11.106.181
+11.11.106.182
+
+[elk_zookeeper]
+11.11.106.183
+11.11.106.184
+11.11.106.185
+
+
+[elk_kibana]
+11.11.106.186
+
+[elk_filebeat]
+11.11.106.180
+11.11.106.181
+11.11.106.182
+11.11.106.186
+11.11.106.183
+11.11.106.184
+11.11.106.185
+
+[all:vars]
+ansible_user=root
+ansible_ssh_pass=bbqHCP%0

@@ -1,0 +1,37 @@
+---
+
+- hosts: all
+  name: enable elk repo, update sysctl limites and install java
+  roles:
+  - role: common
+    tags: common
+  - role: java
+    tags: java
+
+- name: elasticsearch and logstash deploy
+  hosts: elk_elasticsearch_logstash
+  remote_user: root
+  gather_facts: true
+  roles:
+  - role: elasticsearch
+    tags: elasticsearch
+  - role: logstash
+    tags: logstash
+
+
+- name: kafka deploy
+  hosts: elk_kafka
+  remote_user: root
+  gather_facts: true
+  roles:
+  - role: kafka
+    tags: kafka
+
+- name: zookeeper deploy
+  hosts: elk_zookeeper
+  remote_user: root
+  gather_facts: true
+  roles:
+  - role: zookeeper
+    tags: zookeeper
+
